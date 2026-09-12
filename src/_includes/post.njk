@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<div class="page-hero">
+  <h1>{{ title }}</h1>
+  {% if date %}<p>{{ date | readableDate }}</p>{% endif %}
+</div>
+<div class="wrap">
+  <section class="prose narrow">
+    {% if image %}<img class="post-hero-img" src="{{ image }}" alt="{{ title }}">{% endif %}
+    {{ content | safe }}
+    {% if categories %}
+    <p class="tag-row">
+      {% for c in categories %}<span class="tag">{{ c }}</span>{% endfor %}
+    </p>
+    {% endif %}
+    <p><a href="/events/">&larr; Back to all events &amp; news</a></p>
+  </section>
+</div>

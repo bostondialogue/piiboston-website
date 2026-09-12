@@ -1,0 +1,56 @@
+---
+title: Events
+layout: base.njk
+permalink: /events/index.html
+---
+<div class="page-hero">
+  <h1>Events</h1>
+  <p>Gatherings, dialogues, and celebrations across Greater Boston</p>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">What's next</p>
+      <h2>Upcoming Events</h2>
+    </div>
+    {% if collections.upcomingEvents.length %}
+    <div class="events-grid">
+      {% for e in collections.upcomingEvents %}
+      <a class="event-card" href="{{ e.url }}">
+        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          <p class="date">{{ e.data.date | readableDate }}</p>
+          <h3>{{ e.data.title }}</h3>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <h3>No events currently scheduled</h3>
+      <p>Check back soon, or follow us on Facebook for the latest updates.</p>
+    </div>
+    {% endif %}
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">Our history</p>
+      <h2>Past Events</h2>
+    </div>
+    <div class="events-grid">
+      {% for p in collections.posts %}
+      {% if "Events" in p.data.categories %}
+      <a class="event-card" href="{{ p.url }}">
+        <div class="photo">{% if p.data.image %}<img src="{{ p.data.image }}" alt="{{ p.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          {% if p.data.date %}<p class="date">{{ p.data.date | readableDate }}</p>{% endif %}
+          <h3>{{ p.data.title }}</h3>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,80 @@
+---
+title: Peace Islands Institute Boston
+layout: base.njk
+permalink: /index.html
+---
+<div class="hero">
+  <img class="dove" src="/assets/images/pii_tranparent_background.png" alt="">
+  <p class="since">Serving Greater Boston</p>
+  <h1>An island of peace for people of every background.</h1>
+  <p>Peace Islands Institute Boston facilitates a forum of mutual respect and collaboration, welcoming and accepting varied viewpoints and voices, promoting education, friendship, and harmony.</p>
+  <div class="cta-row">
+    <a class="btn btn-gold" href="/events/">See Our Events</a>
+    <a class="btn btn-outline" href="/about-us/">Learn More</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="pillars">
+    <div class="section-head">
+      <p class="eyebrow">What we stand for</p>
+      <h2>Welfare, Unity, Education, Progress</h2>
+    </div>
+    <div class="tiles">
+      <div class="tile"><h4>Welfare</h4></div>
+      <div class="tile"><h4>Unity</h4></div>
+      <div class="tile"><h4>Education</h4></div>
+      <div class="tile"><h4>Progress</h4></div>
+    </div>
+  </section>
+
+  {% if collections.upcomingEvents.length %}
+  <section id="upcoming">
+    <div class="section-head">
+      <p class="eyebrow">Join us</p>
+      <h2>Upcoming Events</h2>
+    </div>
+    <div class="events-grid">
+      {% for e in collections.upcomingEvents %}
+      <a class="event-card" href="{{ e.url }}">
+        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          <p class="date">{{ e.data.date | readableDate }}</p>
+          <h3>{{ e.data.title }}</h3>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div style="text-align:center; margin-top:34px;">
+      <a class="btn btn-gold" style="background:var(--blue-dark); color:#fff;" href="/events/">View All Events →</a>
+    </div>
+  </section>
+  {% endif %}
+
+  <section id="get-involved">
+    <div class="section-head">
+      <p class="eyebrow">Take part</p>
+      <h2>Get Involved</h2>
+    </div>
+    <div class="three-col">
+      <div class="card">
+        <p class="tag">Volunteer</p>
+        <h3>Become a Volunteer</h3>
+        <p>Let's organize events on many topics such as peace, love, equality and humanity.</p>
+        <a href="/become-a-volunteer/">Learn more →</a>
+      </div>
+      <div class="card">
+        <p class="tag">Intern</p>
+        <h3>Become an Intern</h3>
+        <p>Empower your journey, make a difference — join our internship program.</p>
+        <a href="/become-an-intern/">Learn more →</a>
+      </div>
+      <div class="card">
+        <p class="tag">Partner</p>
+        <h3>Sponsor or Partner</h3>
+        <p>Help us organize bigger programs and reach more people across Greater Boston.</p>
+        <a href="/get-involved/">Learn more →</a>
+      </div>
+    </div>
+  </section>
+</div>

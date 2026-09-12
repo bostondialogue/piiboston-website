@@ -1,0 +1,40 @@
+---
+title: Partnership Application
+layout: base.njk
+permalink: /partnership-application/index.html
+---
+<div class="page-hero">
+  <h1>Partnership Application</h1>
+  <p>Seeking partnership for event and organization collaborations</p>
+</div>
+<div class="wrap">
+  <section class="prose narrow">
+    <p>At Peace Islands Institute Boston, we believe in the power of collaboration to achieve greater impact. We are actively seeking partnerships with like-minded organizations and event planners who share our vision of fostering a more harmonious and understanding society.</p>
+  </section>
+  <section>
+    <form name="partnership-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="site-form narrow">
+      <input type="hidden" name="form-name" value="partnership-application">
+      <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+      <label>Institute/charity name<input type="text" name="org_name" required></label>
+      <label>Institute/charity URL<input type="url" name="org_url"></label>
+      <label>Your cell phone<input type="tel" name="phone"></label>
+      <label>Your permanent address<input type="text" name="address"></label>
+      <label>Category
+        <select name="category">
+          <option>Children</option>
+          <option>Environment</option>
+          <option>Health</option>
+          <option>Animals</option>
+          <option>The Arts</option>
+          <option>Schools</option>
+        </select>
+      </label>
+      <label>Executive Director / CEO<input type="text" name="director"></label>
+      <label>Registration number<input type="text" name="registration_number"></label>
+      <label>Contact person name<input type="text" name="contact_name" required></label>
+      <label>Contact email<input type="email" name="contact_email" required></label>
+      <label>What is your institute/charity's mission?<textarea name="mission" rows="4"></textarea></label>
+      <button class="btn btn-gold" type="submit">Submit Application</button>
+    </form>
+  </section>
+</div>

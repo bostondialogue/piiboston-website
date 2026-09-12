@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<div class="page-hero">
+  <h1>{{ title }}</h1>
+  <p>{{ date | readableDate }}</p>
+</div>
+<div class="wrap">
+  <section class="prose narrow event-detail">
+    {% if image %}<img class="event-flyer" src="{{ image }}" alt="{{ title }} flyer">{% endif %}
+    <p><a class="btn btn-gold" href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener">Support this event — Donate</a></p>
+    <p><a href="/events/">&larr; Back to all events</a></p>
+  </section>
+</div>

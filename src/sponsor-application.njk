@@ -1,0 +1,48 @@
+---
+title: Sponsor Application
+layout: base.njk
+permalink: /sponsor-application/index.html
+---
+<div class="page-hero">
+  <h1>Sponsor Application</h1>
+  <p>Seeking sponsors for Peace Islands Institute Boston: be a pillar of change</p>
+</div>
+<div class="wrap">
+  <section class="prose narrow">
+    <h3>Sponsorship Levels</h3>
+    <p><strong>Platinum Sponsor ($5,000)</strong> — prominent logo placement on event materials, website, and promotional materials; exclusive naming rights for select events; keynote speaking opportunities; premier booth/exhibit space; extensive media coverage; special recognition at ceremonies.</p>
+    <p><strong>Gold Sponsor ($3,000)</strong> — logo placement on materials and website; recognition in press releases; speaking opportunities at specific events; premium booth space; inclusion in social media campaigns.</p>
+    <p><strong>Silver Sponsor ($2,000)</strong> — logo placement on materials and website; recognition in select press releases; booth space at events; inclusion in social campaigns.</p>
+    <p><strong>Bronze Sponsor ($1,000)</strong> — logo placement on materials and website; booth space at events; acknowledgment in select promotional materials.</p>
+  </section>
+  <section>
+    <form name="sponsor-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="site-form narrow">
+      <input type="hidden" name="form-name" value="sponsor-application">
+      <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+      <label>Your name<input type="text" name="name" required></label>
+      <label>Name of the organization<input type="text" name="organization" required></label>
+      <label>Your cell phone<input type="tel" name="phone"></label>
+      <label>Your permanent address<input type="text" name="address"></label>
+      <label>How did you hear about us?
+        <select name="heard_about">
+          <option>Walk-In</option>
+          <option>Employee</option>
+          <option>Newspaper Ad</option>
+          <option>Facebook</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Sponsorship level
+        <select name="sponsorship_level" required>
+          <option>Platinum Sponsor ($5000)</option>
+          <option>Gold Sponsor ($3000)</option>
+          <option>Silver Sponsor ($2000)</option>
+          <option>Bronze Sponsor ($1000)</option>
+          <option>Customized Sponsorship</option>
+        </select>
+      </label>
+      <label>Sponsorship proposal / additional information<textarea name="proposal" rows="6"></textarea></label>
+      <button class="btn btn-gold" type="submit">Submit Application</button>
+    </form>
+  </section>
+</div>

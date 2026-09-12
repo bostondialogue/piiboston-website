@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}{% if title != "Peace Islands Institute Boston" %} — Peace Islands Institute Boston{% endif %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/assets/images/pii_tranparent_background.png" alt="Peace Islands Institute Boston logo">
+      <span class="name">Peace Islands<br>Institute Boston</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about-us/">About</a>
+      <a href="/events/">Events</a>
+      <a href="/interfaith/">Interfaith</a>
+      <a href="/friendship/">Friendship</a>
+      <a href="/get-involved/">Get Involved</a>
+      <a href="/contact-us/">Contact</a>
+      <a class="donate" href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener">Donate</a>
+    </nav>
+  </div>
+</header>
+
+{{ content | safe }}
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div>
+      <h5>Peace Islands Institute Boston</h5>
+      <p>PIIB is a DBA of Boston Dialogue Foundation Inc. Facilitating mutual respect, dialogue, and collaboration across the Greater Boston area.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/get-involved/">Get Involved</a></li>
+        <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener">Donate</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="mailto:info@piiboston.org">info@piiboston.org</a></li>
+        <li><a href="https://www.facebook.com/peaceislandsma" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/peaceislandsboston/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap bottom">© {{ currentYear }} Peace Islands Institute Boston. 500 Revere St, Revere, MA 02151.</div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

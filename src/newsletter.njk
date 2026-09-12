@@ -1,0 +1,34 @@
+---
+title: Newsletter
+layout: base.njk
+permalink: /newsletter/index.html
+---
+<div class="page-hero">
+  <h1>Newsletter</h1>
+  <p>Let's keep you updated</p>
+</div>
+<div class="wrap">
+  <section>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>We will be happy to keep in touch with you — do not hesitate to reach out with questions or suggestions.</p>
+        <dl>
+          <dt>Email</dt>
+          <dd><a href="mailto:info@piiboston.org">info@piiboston.org</a></dd>
+          <dt>Office</dt>
+          <dd>500 Revere St, Revere, MA 02151</dd>
+        </dl>
+      </div>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="site-form">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <label>Your name<input type="text" name="name" required></label>
+        <label>Your email<input type="email" name="email" required></label>
+        <label>Organization<input type="text" name="organization"></label>
+        <label>Address<input type="text" name="address"></label>
+        <label>Your message (optional)<textarea name="message" rows="4"></textarea></label>
+        <button class="btn btn-gold" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </section>
+</div>

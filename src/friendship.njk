@@ -1,0 +1,26 @@
+---
+title: Friendship
+layout: base.njk
+permalink: /friendship/index.html
+---
+<div class="page-hero">
+  <h1>Friendship</h1>
+  <p>Public Heroes &amp; Friendship Dinners, and community connection programs</p>
+</div>
+<div class="wrap">
+  <section>
+    <div class="events-grid">
+      {% for p in collections.posts %}
+      {% if "Friendship" in p.data.categories %}
+      <a class="event-card" href="{{ p.url }}">
+        <div class="photo">{% if p.data.image %}<img src="{{ p.data.image }}" alt="{{ p.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          {% if p.data.date %}<p class="date">{{ p.data.date | readableDate }}</p>{% endif %}
+          <h3>{{ p.data.title }}</h3>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

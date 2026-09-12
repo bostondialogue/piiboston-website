@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "events"
+    label: "Upcoming Events"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "End time (optional)", name: "end_date", widget: "string", required: false }
+      - { label: "Flyer image", name: "image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["event"] }
+
+  - name: "posts"
+    label: "News & Past Events"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["Events", "Interfaith", "Friendship"]
+        default: ["Events"]
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["post"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["page"] }
+      - { label: "Body", name: "body", widget: "markdown" }
