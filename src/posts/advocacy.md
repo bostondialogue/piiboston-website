@@ -3,7 +3,8 @@ title: "Advocacy"
 date: "2021-03-02"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/advocasy-600x600.jpg"
 tags: [post]
 ---
 

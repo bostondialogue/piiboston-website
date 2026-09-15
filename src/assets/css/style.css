@@ -10,6 +10,8 @@
 }
 
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+#mission-vision, #who-we-are, #what-we-do, #grant-allocations { scroll-margin-top: 140px; }
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -111,9 +113,9 @@ nav a:hover, .nav-dropdown > button:hover, nav a.current { color: var(--blue-dar
 .accordion-list details p { max-width: 720px; margin: 0 0 26px; color: #252525; font-size: 16px; line-height: 1.8; }
 
 /* page hero (interior pages) */
-.page-hero { background: var(--blue-dark); color: #fff; text-align: center; padding: 56px 24px; }
-.page-hero h1 { color: #fff; margin-bottom: 6px; }
-.page-hero p { color: #cfe0f2; margin: 0; }
+.page-hero { background: var(--blue-dark); color: #fff; text-align: center; padding: 34px 24px; }
+.page-hero h1 { color: #fff; margin-bottom: 6px; font-size: 28px; }
+.page-hero p { color: #cfe0f2; margin: 0; font-size: 15px; }
 
 section { padding: 56px 0; border-bottom: 1px solid var(--border); }
 section:last-child { border-bottom: none; }
@@ -165,11 +167,37 @@ section:last-child { border-bottom: none; }
   border: 1px solid var(--border); border-radius: 8px; background: var(--surface);
 }
 .site-form button { align-self: flex-start; border: none; cursor: pointer; }
+.site-form fieldset { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px 14px; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.site-form legend { font-weight: 600; font-size: 14px; padding: 0 4px; }
+.site-form .checkbox-group, .site-form .radio-group { flex-direction: row; flex-wrap: wrap; gap: 8px 18px; }
+.site-form label.checkbox-option, .site-form label.radio-option {
+  flex-direction: row; align-items: center; gap: 6px; font-weight: 400; font-size: 14px;
+}
+.site-form input[type="checkbox"], .site-form input[type="radio"] { width: auto; }
+.site-form input[type="file"] { border: 1px dashed var(--border); background: var(--bg); padding: 10px 12px; }
+.site-form .field-hint { font-weight: 400; font-size: 13px; color: var(--muted); margin: -2px 0 0; }
 
 .prose { max-width: 860px; margin: 0 auto; }
 .prose.narrow { max-width: 720px; }
 .prose h3 { margin-top: 1.6em; color: var(--blue-dark); }
 .prose a { word-break: break-word; }
+
+.about-section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+.about-section:last-child { border-bottom: none; padding-bottom: 0; }
+.about-section h2 { color: var(--blue-dark); }
+.about-section li { margin-bottom: 8px; line-height: 1.7; }
+.about-section--tight { padding-top: 0; }
+
+.pillar-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.pillar {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 999px;
+  padding: 8px 20px; font-family: 'Poppins', sans-serif; font-weight: 700;
+  color: var(--blue-dark); font-size: 14px;
+}
+
+.link-list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.link-list a { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; display: block; }
+.link-list span { display: block; color: var(--muted); font-size: 14.5px; margin-top: 2px; }
 
 .post-hero-img, .event-flyer { border-radius: 14px; margin-bottom: 24px; max-height: 480px; width: 100%; object-fit: cover; }
 .tag-row { margin-top: 24px; }
@@ -203,6 +231,7 @@ footer.site a:hover { color: #fff; }
 .bottom { border-top: 1px solid #2c3947; padding: 18px 24px; text-align: center; font-size: 13px; color: #8b97a3; }
 
 @media (max-width: 860px) {
+  #mission-vision, #who-we-are, #what-we-do, #grant-allocations { scroll-margin-top: 100px; }
   .site-bar { min-height: 92px; }
   .brand img { width: 220px; height: 80px; }
   .site-bar.is-compact .brand img { width: 180px; height: 52px; }
@@ -217,6 +246,10 @@ footer.site a:hover { color: #fff; }
   .event-carousel .event-card { flex-basis: calc((100% - 22px) / 2); }
 }
 @media (max-width: 640px) {
+  #mission-vision, #who-we-are, #what-we-do, #grant-allocations { scroll-margin-top: 76px; }
+  .page-hero { padding: 24px 20px; }
+  .page-hero h1 { font-size: 22px; }
+  .page-hero p { font-size: 14px; }
   .utility-inner { min-height: 44px; padding: 0 16px; }
   .contact-links { gap: 0; }
   .contact-links a { font-size: 0; }

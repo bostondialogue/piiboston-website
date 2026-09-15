@@ -3,7 +3,8 @@ title: "Whirling Dervish"
 date: "2023-03-12"
 categories:
   - Events
-image: ""
+  - Food & Culture
+image: "/assets/images/Copy-of-Copy-of-Interfaith-Prayer-Vigil-for-Earthquake-Victims-in-Turkey-and-Syria-2160-_-1080-px-600x600.png"
 tags: [post]
 ---
 

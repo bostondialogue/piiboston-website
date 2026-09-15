@@ -3,7 +3,9 @@ title: "Thanksgiving Dinner 2021"
 date: "2021-11-18"
 categories:
   - Events
-image: ""
+  - Friendship
+  - Community Services
+image: "/assets/images/ThanksGiving-600x600.jpg"
 tags: [post]
 ---
 

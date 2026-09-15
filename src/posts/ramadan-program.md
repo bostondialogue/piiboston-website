@@ -3,7 +3,8 @@ title: "Ramadan Program"
 date: "2021-04-15"
 categories:
   - Events
-image: ""
+  - Interfaith
+image: "/assets/images/Ramadan-program-page-001-600x600.jpg"
 tags: [post]
 ---
 

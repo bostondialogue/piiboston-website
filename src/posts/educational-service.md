@@ -3,7 +3,8 @@ title: "Educational Service"
 date: "2022-01-07"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/comm-copydd.jpg"
 tags: [post]
 ---
 

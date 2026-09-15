@@ -5,7 +5,7 @@ categories:
   - Events
   - Friendship
   - Interfaith
-image: ""
+image: "/assets/images/WhatsApp-Image-2026-03-30-at-4.52.35-AM-e1774987326588-600x445.jpeg"
 tags: [post]
 ---
 

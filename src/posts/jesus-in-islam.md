@@ -1,9 +1,10 @@
 ---
 title: "Jesus in Islam"
-date:
+date: "2020-10-30"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/islams_jesus-600x600.jpg"
 tags: [post]
 ---
 

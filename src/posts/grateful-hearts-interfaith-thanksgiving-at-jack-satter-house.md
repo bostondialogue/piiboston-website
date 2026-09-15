@@ -4,7 +4,8 @@ date: "2025-11-28"
 categories:
   - Events
   - Interfaith
-image: ""
+  - Friendship
+image: "/assets/images/ThanksG-300x300.jpg"
 tags: [post]
 ---
 

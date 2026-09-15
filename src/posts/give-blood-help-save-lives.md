@@ -3,7 +3,8 @@ title: "Give Blood Help Save Lives"
 date: "2021-10-02"
 categories:
   - Events
-image: ""
+  - Charity Events
+image: "/assets/images/giveTold-600x600.jpg"
 tags: [post]
 ---
 

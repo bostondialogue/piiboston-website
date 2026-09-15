@@ -3,7 +3,9 @@ title: "Celebrating Ramadan & Easter & Passover"
 date: "2023-04-13"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Friendship
+image: "/assets/images/3-600x600.png"
 tags: [post]
 ---
 

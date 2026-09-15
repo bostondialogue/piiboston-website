@@ -1,9 +1,10 @@
 ---
 title: "Global Peace"
-date:
+date: "2021-01-12"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/global-peace-600x600.jpg"
 tags: [post]
 ---
 

@@ -1,8 +1,11 @@
 ---
 title: "Give Back Dinner"
-date: "2024-03-12"
-categories: []
-image: ""
+date: "2024-03-24"
+categories:
+  - Charity Events
+  - Community Services
+
+image: "/assets/images/Warming-Station-PII-PIIB-copy-1-300x300.png"
 tags: [post]
 ---
 

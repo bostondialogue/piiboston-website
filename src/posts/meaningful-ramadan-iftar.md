@@ -5,7 +5,7 @@ categories:
   - Events
   - Friendship
   - Interfaith
-image: ""
+image: "/assets/images/Scatter-300x300.jpg"
 tags: [post]
 ---
 

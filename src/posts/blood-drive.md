@@ -1,9 +1,10 @@
 ---
 title: "Blood Drive"
-date:
+date: "2020-12-12"
 categories:
   - Events
-image: ""
+  - Charity Events
+image: "/assets/images/event-600x600.jpeg"
 tags: [post]
 ---
 

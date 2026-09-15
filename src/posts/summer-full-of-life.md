@@ -3,7 +3,8 @@ title: "Summer Full Of Life"
 date: "2021-07-16"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/Summer-Full-of-Life-600x600.jpg"
 tags: [post]
 ---
 

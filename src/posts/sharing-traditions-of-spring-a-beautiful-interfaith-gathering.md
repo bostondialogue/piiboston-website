@@ -5,7 +5,7 @@ categories:
   - Events
   - Friendship
   - Interfaith
-image: ""
+image: "/assets/images/Interfaith-600x445.jpg"
 tags: [post]
 ---
 

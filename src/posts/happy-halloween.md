@@ -1,9 +1,10 @@
 ---
 title: "Happy Halloween"
-date:
+date: "2020-10-31"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/Hapy-Halloween-300x300.jpg"
 tags: [post]
 ---
 

@@ -3,7 +3,8 @@ title: "Lecture \u2013 Q & A"
 date: "2021-03-27"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/Lecture-Q-A-600x423.jpg"
 tags: [post]
 ---
 

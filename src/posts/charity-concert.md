@@ -3,7 +3,8 @@ title: "CHARITY CONCERT"
 date: "2023-10-18"
 categories:
   - Events
-image: ""
+  - Charity Events
+image: "/assets/images/IMG-4153-1-600x600.jpg"
 tags: [post]
 ---
 

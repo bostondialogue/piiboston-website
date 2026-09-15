@@ -3,7 +3,8 @@ title: "Veterans Day"
 date: "2021-11-11"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/VeteransDay-600x600.jpg"
 tags: [post]
 ---
 

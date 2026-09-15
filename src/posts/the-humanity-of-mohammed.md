@@ -3,7 +3,8 @@ title: "The Humanity Of Mohammed"
 date: "2021-02-13"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/TheHumanityOfMohammed-600x600.png"
 tags: [post]
 ---
 

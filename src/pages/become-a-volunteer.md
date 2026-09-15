@@ -21,15 +21,24 @@ Become a part of our journey today. Your time, skills, and heart can make all th
 
 Sign up to volunteer at Peace Islands Institute Boston and be the change you wish to see in the world.
 
-Your name
-
-Your email
-
-Select the day(s) you're available for work
-MondayTuesdayWednesdayThursdayFridaySaturdaySunday
-
-Skillsets or Area of Interests
-
-Skills (Dialogue, Teaching, Art & Craft etc.)
-
-Δ
+<form name="become-a-volunteer" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="site-form narrow">
+  <input type="hidden" name="form-name" value="become-a-volunteer">
+  <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+  <label>Your name<input type="text" name="name" required></label>
+  <label>Your email<input type="email" name="email" required></label>
+  <fieldset>
+    <legend>Select the day(s) you're available for work</legend>
+    <div class="checkbox-group">
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Monday"> Monday</label>
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Tuesday"> Tuesday</label>
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Wednesday"> Wednesday</label>
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Thursday"> Thursday</label>
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Friday"> Friday</label>
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Saturday"> Saturday</label>
+      <label class="checkbox-option"><input type="checkbox" name="available_days" value="Sunday"> Sunday</label>
+    </div>
+  </fieldset>
+  <label>Skillsets or Area of Interests<input type="text" name="skillsets"></label>
+  <label>Skills (Dialogue, Teaching, Art &amp; Craft etc.)<input type="text" name="skills"></label>
+  <button class="btn btn-gold" type="submit">Sign Up to Volunteer</button>
+</form>

@@ -4,7 +4,8 @@ date: "2026-03-17"
 categories:
   - Events
   - Friendship
-image: ""
+  - Interfaith
+image: "/assets/images/helping-600x445.jpg"
 tags: [post]
 ---
 

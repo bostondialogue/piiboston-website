@@ -3,7 +3,8 @@ title: "Reception at State Capitol"
 date: "2021-07-14"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/reception-600x467.jpg"
 tags: [post]
 ---
 

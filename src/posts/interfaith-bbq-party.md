@@ -3,7 +3,9 @@ title: "Interfaith BBQ Party"
 date: "2023-08-20"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Food & Culture
+image: "/assets/images/White-and-Black-Modern-Cookies-Bake-Sale-Flyer-600x600.png"
 tags: [post]
 ---
 

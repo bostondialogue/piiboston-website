@@ -3,7 +3,8 @@ title: "Humanitarian Aid"
 date: "2021-11-26"
 categories:
   - Events
-image: ""
+  - Charity Events
+image: "/assets/images/human-600x530.jpg"
 tags: [post]
 ---
 

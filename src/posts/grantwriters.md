@@ -3,7 +3,7 @@ title: "Open Positions: A Grant Writer"
 date: "2024-03-12"
 categories:
   - Events
-image: ""
+image: "/assets/images/Grant-Writers-PII-PIIB-2-300x300.png"
 tags: [post]
 ---
 

@@ -19,11 +19,12 @@ permalink: /newsletter/index.html
           <dd>500 Revere St, Revere, MA 02151</dd>
         </dl>
       </div>
-      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="site-form">
+      <form name="newsletter" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="site-form">
         <input type="hidden" name="form-name" value="newsletter">
         <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
         <label>Your name<input type="text" name="name" required></label>
         <label>Your email<input type="email" name="email" required></label>
+        <label>Subject<input type="text" name="subject"></label>
         <label>Organization<input type="text" name="organization"></label>
         <label>Address<input type="text" name="address"></label>
         <label>Your message (optional)<textarea name="message" rows="4"></textarea></label>

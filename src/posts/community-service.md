@@ -3,7 +3,8 @@ title: "Community Service"
 date: "2021-07-15"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/comminty-600x600.jpg"
 tags: [post]
 ---
 

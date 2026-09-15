@@ -3,7 +3,9 @@ title: "Spiritual Reading Series \u2013 1"
 date: "2022-02-25"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Conference & Panels
+image: "/assets/images/SpiritualReadingSeries1-650x650-1-600x600.jpg"
 tags: [post]
 ---
 

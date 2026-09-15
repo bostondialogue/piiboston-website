@@ -1,0 +1,37 @@
+---
+title: Food & Cultural Events
+layout: base.njk
+permalink: /food-culture/index.html
+---
+<div class="page-hero">
+  <h1>Food &amp; Cultural Events</h1>
+  <p>Cuisine, art, and traditions from around the world</p>
+</div>
+<div class="wrap">
+  <section>
+    <div class="events-grid">
+      {% for e in collections.upcomingEvents %}
+      {% if "Food & Culture" in e.data.categories %}
+      <a class="event-card" href="{{ e.url }}">
+        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          <p class="date">{{ e.data.date | readableDate }}</p>
+          <h3>{{ e.data.title }}</h3>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+      {% for p in collections.posts %}
+      {% if "Food & Culture" in p.data.categories %}
+      <a class="event-card" href="{{ p.url }}">
+        <div class="photo">{% if p.data.image %}<img src="{{ p.data.image }}" alt="{{ p.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          {% if p.data.date %}<p class="date">{{ p.data.date | readableDate }}</p>{% endif %}
+          <h3>{{ p.data.title }}</h3>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

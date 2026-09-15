@@ -1,7 +1,9 @@
 ---
 title: "Ramadan 2024 Prep"
 date: "2024-03-12"
-categories: []
+categories:
+  - Interfaith
+
 image: "/assets/images/Untitled.png"
 tags: [post]
 ---

@@ -3,7 +3,8 @@ title: "PII Boston Proudly Participates in Mass Cultural Council\u2019s Card to 
 date: "2023-12-14"
 categories:
   - Events
-image: ""
+  - Food & Culture
+image: "/assets/images/62f2677b190b9.webp"
 tags: [post]
 ---
 

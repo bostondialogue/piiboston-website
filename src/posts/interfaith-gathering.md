@@ -3,7 +3,8 @@ title: "Interfaith Gathering"
 date: "2021-12-02"
 categories:
   - Events
-image: ""
+  - Interfaith
+image: "/assets/images/Interfaith-600x445.jpg"
 tags: [post]
 ---
 

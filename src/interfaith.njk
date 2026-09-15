@@ -1,15 +1,26 @@
 ---
-title: Interfaith
+title: Inter/Intra Faith Gatherings
 layout: base.njk
 permalink: /interfaith/index.html
 ---
 <div class="page-hero">
-  <h1>Interfaith</h1>
+  <h1>Inter/Intra Faith Gatherings</h1>
   <p>Building relationships and understanding across faith traditions</p>
 </div>
 <div class="wrap">
   <section>
     <div class="events-grid">
+      {% for e in collections.upcomingEvents %}
+      {% if "Interfaith" in e.data.categories %}
+      <a class="event-card" href="{{ e.url }}">
+        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          <p class="date">{{ e.data.date | readableDate }}</p>
+          <h3>{{ e.data.title }}</h3>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
       {% for p in collections.posts %}
       {% if "Interfaith" in p.data.categories %}
       <a class="event-card" href="{{ p.url }}">

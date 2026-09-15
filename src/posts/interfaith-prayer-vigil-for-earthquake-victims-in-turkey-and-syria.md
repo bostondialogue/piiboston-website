@@ -3,7 +3,9 @@ title: "INTERFAITH PRAYER VIGIL FOR EARTHQUAKE VICTIMS IN TURKEY AND SYRIA"
 date: "2023-02-12"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Charity Events
+image: "/assets/images/13b18d67-b3ea-4a72-8ffb-25fa19b1b836-1-600x600.jpg"
 tags: [post]
 ---
 

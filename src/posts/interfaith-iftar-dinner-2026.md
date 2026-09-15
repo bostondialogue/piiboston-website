@@ -5,7 +5,7 @@ categories:
   - Events
   - Friendship
   - Interfaith
-image: ""
+image: "/assets/images/ACC-event-600x445.jpg"
 tags: [post]
 ---
 

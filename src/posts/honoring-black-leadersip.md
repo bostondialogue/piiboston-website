@@ -3,7 +3,8 @@ title: "Honoring Black Leadersip"
 date: "2021-01-13"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/honoring-black-leadership-600x600.jpg"
 tags: [post]
 ---
 

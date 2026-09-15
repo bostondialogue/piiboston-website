@@ -3,7 +3,8 @@ title: "Ethiopia Library Project Shipping Cost"
 date: "2021-09-23"
 categories:
   - Events
-image: ""
+  - Charity Events
+image: "/assets/images/Ethopia-Library-Projoect-600x600.jpg"
 tags: [post]
 ---
 

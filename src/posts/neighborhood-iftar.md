@@ -3,7 +3,9 @@ title: "Neighborhood Iftar"
 date: "2023-03-25"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Friendship
+image: "/assets/images/WhatsApp-Image-2023-03-21-at-11.23.19-PM-600x600.jpg"
 tags: [post]
 ---
 

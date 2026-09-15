@@ -3,7 +3,8 @@ title: "Women in Islam"
 date: "2021-04-02"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/womeninislam-600x600.jpg"
 tags: [post]
 ---
 

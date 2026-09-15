@@ -3,7 +3,8 @@ title: "Conference & Panels"
 date: "2021-03-09"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/connferance-600x420.jpg"
 tags: [post]
 ---
 

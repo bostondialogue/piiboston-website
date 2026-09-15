@@ -3,7 +3,9 @@ title: "Ramadan Iftar Tent and Charity Event"
 date: "2023-03-31"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Charity Events
+image: "/assets/images/Copy-of-Copy-of-Interfaith-Prayer-Vigil-for-Earthquake-Victims-in-Turkey-and-Syria-2160-_-1080-px-1-600x600.png"
 tags: [post]
 ---
 

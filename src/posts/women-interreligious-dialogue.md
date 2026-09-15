@@ -3,7 +3,9 @@ title: "Women & Interreligious Dialogue"
 date: "2022-03-22"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Conference & Panels
+image: "/assets/images/WhatsApp-Image-2022-03-01-at-10.06.53-PM-650x366-1-600x366.jpg"
 tags: [post]
 ---
 

@@ -3,7 +3,8 @@ title: "International Study Trip"
 date:
 categories:
   - Events
-image: ""
+  - International Peace Trips
+image: "/assets/images/oii.resized-1-300x300.png"
 tags: [post]
 ---
 

@@ -10,6 +10,17 @@ permalink: /friendship/index.html
 <div class="wrap">
   <section>
     <div class="events-grid">
+      {% for e in collections.upcomingEvents %}
+      {% if "Friendship" in e.data.categories %}
+      <a class="event-card" href="{{ e.url }}">
+        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          <p class="date">{{ e.data.date | readableDate }}</p>
+          <h3>{{ e.data.title }}</h3>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
       {% for p in collections.posts %}
       {% if "Friendship" in p.data.categories %}
       <a class="event-card" href="{{ p.url }}">

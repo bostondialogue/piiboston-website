@@ -3,7 +3,8 @@ title: "Boston Local Food"
 date: "2023-09-17"
 categories:
   - Events
-image: ""
+  - Food & Culture
+image: "/assets/images/2-600x600.png"
 tags: [post]
 ---
 

@@ -3,7 +3,9 @@ title: "Solidarity Gathering"
 date: "2022-03-11"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Community Services
+image: "/assets/images/PII-Solidarity-Gathering-pdf-600x600.jpg"
 tags: [post]
 ---
 

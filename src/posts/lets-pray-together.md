@@ -3,7 +3,8 @@ title: "Let\u2019s Pray Together"
 date: "2021-01-16"
 categories:
   - Events
-image: ""
+  - Interfaith
+image: "/assets/images/lets-pray-together-600x600.jpg"
 tags: [post]
 ---
 

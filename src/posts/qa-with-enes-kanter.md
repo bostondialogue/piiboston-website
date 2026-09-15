@@ -3,7 +3,8 @@ title: "Q&A With Enes Kanter"
 date: "2020-09-18"
 categories:
   - Events
-image: ""
+  - Conference & Panels
+image: "/assets/images/enes-1-600x600.png"
 tags: [post]
 ---
 

@@ -3,7 +3,8 @@ title: "Annual Friendship Dinner and Peace Awards Ceremony"
 date: "2022-01-04"
 categories:
   - Events
-image: ""
+  - Friendship
+image: "/assets/images/frendship-600x433.jpg"
 tags: [post]
 ---
 

@@ -3,7 +3,8 @@ title: "Halloween 2021"
 date: "2021-10-31"
 categories:
   - Events
-image: ""
+  - Community Services
+image: "/assets/images/PII-halloween-600x600.jpg"
 tags: [post]
 ---
 

@@ -3,7 +3,9 @@ title: "5th Annual Melrose Community Iftar Celebration"
 date: "2023-04-08"
 categories:
   - Events
-image: ""
+  - Interfaith
+  - Friendship
+image: "/assets/images/6-600x600.png"
 tags: [post]
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: "Toy Drive"
-date:
+date: "2020-12-12"
 categories:
   - Events
-image: ""
+  - Charity Events
+image: "/assets/images/toy-drive-600x600.jpg"
 tags: [post]
 ---
 
