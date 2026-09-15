@@ -3,22 +3,151 @@ title: Peace Islands Institute Boston
 layout: base.njk
 permalink: /index.html
 ---
-<div class="hero">
-  <img class="dove" src="/assets/images/pii_tranparent_background.png" alt="">
-  <p class="since">Serving Greater Boston</p>
-  <h1>An island of peace for people of every background.</h1>
-  <p>Peace Islands Institute Boston facilitates a forum of mutual respect and collaboration, welcoming and accepting varied viewpoints and voices, promoting education, friendship, and harmony.</p>
-  <div class="cta-row">
-    <a class="btn btn-gold" href="/events/">See Our Events</a>
-    <a class="btn btn-outline" href="/about-us/">Learn More</a>
+<section class="home-slider" aria-label="Peace Islands Institute Boston highlights" data-slider>
+  <div class="slides">
+    <article class="slide is-active" data-slide>
+      <img src="/assets/images/home-slider-peace.jpg" alt="Peace Islands Institute community gathering">
+      <div class="slide-shade"></div>
+      <div class="slide-copy">
+        <p class="slide-kicker">Peace Islands Institute</p>
+        <h1>Peace, Dialogue<br>and Friendship</h1>
+      </div>
+    </article>
+    <article class="slide" data-slide aria-hidden="true">
+      <img src="/assets/images/home-slider-advocacy.jpg" alt="Advocacy presentation at Peace Islands Institute">
+      <div class="slide-shade"></div>
+      <div class="slide-copy">
+        <p class="slide-kicker">Advocacy</p>
+        <h1>Mutual Respect<br>Social Harmony</h1>
+      </div>
+    </article>
+    <article class="slide" data-slide aria-hidden="true">
+      <img src="/assets/images/home-slider-interfaith.jpg" alt="People gathered for an interfaith event">
+      <div class="slide-shade"></div>
+      <div class="slide-copy">
+        <p class="slide-kicker">Interfaith Gatherings</p>
+        <h1>Uniting Through<br>Shared Values</h1>
+      </div>
+    </article>
+    <article class="slide" data-slide aria-hidden="true">
+      <img src="/assets/images/home-slider-community.jpeg" alt="Peace Islands Institute community event">
+      <div class="slide-shade"></div>
+      <div class="slide-copy">
+        <p class="slide-kicker">Community</p>
+        <h1>Connecting People<br>Across Greater Boston</h1>
+      </div>
+    </article>
   </div>
-</div>
+  <button class="slider-control slider-prev" type="button" data-slider-prev aria-label="Previous slide">&#8249;</button>
+  <button class="slider-control slider-next" type="button" data-slider-next aria-label="Next slide">&#8250;</button>
+  <div class="slider-dots" role="tablist" aria-label="Choose a homepage highlight">
+    <button class="slider-dot is-active" type="button" data-slide-dot="0" role="tab" aria-label="Show slide 1" aria-selected="true"></button>
+    <button class="slider-dot" type="button" data-slide-dot="1" role="tab" aria-label="Show slide 2" aria-selected="false"></button>
+    <button class="slider-dot" type="button" data-slide-dot="2" role="tab" aria-label="Show slide 3" aria-selected="false"></button>
+    <button class="slider-dot" type="button" data-slide-dot="3" role="tab" aria-label="Show slide 4" aria-selected="false"></button>
+  </div>
+</section>
+
+{% if collections.recentEvents.length %}
+<section id="upcoming" class="upcoming-section" data-events-slider>
+  <div class="wrap">
+    {% set fallbackImages = [
+      "/assets/images/interfaith-600x600.jpg",
+      "/assets/images/comm-copydd-600x512.jpg",
+      "/assets/images/frendship-600x433.jpg",
+      "/assets/images/Church-600x445.jpg",
+      "/assets/images/event-600x600.jpeg"
+    ] %}
+    <div class="section-head">
+      <p class="eyebrow">Join us</p>
+      <h2>Upcoming &amp; Recent Events</h2>
+    </div>
+    <div class="event-carousel">
+      <button class="event-carousel-control event-carousel-prev" type="button" data-events-prev aria-label="Previous events">&#8249;</button>
+      <div class="event-carousel-viewport" data-events-viewport tabindex="0" aria-label="Upcoming events carousel">
+        <div class="event-carousel-track">
+          {% for e in collections.recentEvents %}
+          {% if loop.index <= 10 %}
+          <a class="event-card" href="{{ e.url }}">
+            <div class="photo"><img src="{% if e.data.image %}{{ e.data.image }}{% else %}{{ fallbackImages[(loop.index0) % (fallbackImages.length)] }}{% endif %}" alt="{{ e.data.title }}"></div>
+            <div class="body">
+              <p class="date">{{ e.data.date | readableDate }}</p>
+              <h3>{{ e.data.title }}</h3>
+            </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <button class="event-carousel-control event-carousel-next" type="button" data-events-next aria-label="Next events">&#8250;</button>
+    </div>
+    <div style="text-align:center; margin-top:34px;">
+      <a class="btn btn-gold" style="background:var(--blue-dark); color:#fff;" href="/events/">View All Events →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="who-we-are">
+  <div class="wrap who-we-are-grid">
+    <div class="who-we-are-copy">
+      <p class="eyebrow">Who are we?</p>
+      <h2>We promote dialogue and friendship!</h2>
+      <p>Peace Islands Institute promotes peace, love, respect, humanity, integrity, welfare, understanding, and much more. We aspire to facilitate a venue of mutual respect and collaboration, welcoming the diversity of voices in our community.</p>
+      <a class="btn btn-gold" href="/about-us/">Learn More</a>
+    </div>
+    <div class="video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/UQkXKEEav9M" title="Peace Islands Institute: Who are we?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="wrap action-cards">
+    <a class="action-card" href="/become-a-volunteer/">
+      <img src="/assets/images/comm-copydd-2.webp" alt="">
+      <span class="action-card-shade"></span>
+      <span class="action-card-content"><i class="fa-solid fa-user-group" aria-hidden="true"></i><strong>Volunteer</strong><small>Build Peace!</small></span>
+    </a>
+    <a class="action-card" href="/become-an-intern/">
+      <img src="/assets/images/team-2-600x600.jpg" alt="">
+      <span class="action-card-shade"></span>
+      <span class="action-card-content"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><strong>Intern</strong><small>Work alongside us!</small></span>
+    </a>
+    <a class="action-card" href="/partnership-application/">
+      <img src="/assets/images/comminty.webp" alt="">
+      <span class="action-card-shade"></span>
+      <span class="action-card-content"><i class="fa-solid fa-handshake" aria-hidden="true"></i><strong>Partner</strong><small>Let&apos;s work together!</small></span>
+    </a>
+    <a class="action-card" href="/sponsor-application/">
+      <img src="/assets/images/frendship.webp" alt="">
+      <span class="action-card-shade"></span>
+      <span class="action-card-content"><i class="fa-solid fa-seedling" aria-hidden="true"></i><strong>Sponsor</strong><small>Promote Change!</small></span>
+    </a>
+  </div>
+  <div class="wrap what-we-do">
+    <div class="section-head">
+      <p class="eyebrow">What do we do?</p>
+      <h2>We advocate for a peaceful atmosphere.</h2>
+    </div>
+    <div class="accordion-list">
+      <details>
+        <summary>We promote peace, friendship, and dialogue.</summary>
+        <p>We aim to accomplish this through: facilitating unity in order to build peace, educating the people to uproot ignorance, supplying welfare to fight against poverty and hunger, and pushing for progress to promote development.</p>
+      </details>
+      <details>
+        <summary>We are looking for solutions.</summary>
+        <p>Global and social issues today and the environment surrounding them are messy. Therefore, we aim to develop original and alternative perspectives on these relatable issues we witness daily, and to present explanations and solutions to said problems.</p>
+      </details>
+      <details>
+        <summary>We build relationships that support peace.</summary>
+        <p>We cultivate meaningful relationships by bringing people together with successful practices in peace building, thus establishing much-needed relationships among diverse cultures and traditions.</p>
+      </details>
+    </div>
+  </div>
+</section>
 
 <div class="wrap">
   <section id="pillars">
     <div class="section-head">
       <p class="eyebrow">What we stand for</p>
-      <h2>Welfare, Unity, Education, Progress</h2>
     </div>
     <div class="tiles">
       <div class="tile"><h4>Welfare</h4></div>
@@ -28,53 +157,4 @@ permalink: /index.html
     </div>
   </section>
 
-  {% if collections.upcomingEvents.length %}
-  <section id="upcoming">
-    <div class="section-head">
-      <p class="eyebrow">Join us</p>
-      <h2>Upcoming Events</h2>
-    </div>
-    <div class="events-grid">
-      {% for e in collections.upcomingEvents %}
-      <a class="event-card" href="{{ e.url }}">
-        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
-        <div class="body">
-          <p class="date">{{ e.data.date | readableDate }}</p>
-          <h3>{{ e.data.title }}</h3>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-    <div style="text-align:center; margin-top:34px;">
-      <a class="btn btn-gold" style="background:var(--blue-dark); color:#fff;" href="/events/">View All Events →</a>
-    </div>
-  </section>
-  {% endif %}
-
-  <section id="get-involved">
-    <div class="section-head">
-      <p class="eyebrow">Take part</p>
-      <h2>Get Involved</h2>
-    </div>
-    <div class="three-col">
-      <div class="card">
-        <p class="tag">Volunteer</p>
-        <h3>Become a Volunteer</h3>
-        <p>Let's organize events on many topics such as peace, love, equality and humanity.</p>
-        <a href="/become-a-volunteer/">Learn more →</a>
-      </div>
-      <div class="card">
-        <p class="tag">Intern</p>
-        <h3>Become an Intern</h3>
-        <p>Empower your journey, make a difference — join our internship program.</p>
-        <a href="/become-an-intern/">Learn more →</a>
-      </div>
-      <div class="card">
-        <p class="tag">Partner</p>
-        <h3>Sponsor or Partner</h3>
-        <p>Help us organize bigger programs and reach more people across Greater Boston.</p>
-        <a href="/get-involved/">Learn more →</a>
-      </div>
-    </div>
-  </section>
 </div>

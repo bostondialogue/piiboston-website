@@ -6,57 +6,151 @@
 <title>{{ title }}{% if title != "Peace Islands Institute Boston" %} — Peace Islands Institute Boston{% endif %}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
 <header class="site">
-  <div class="bar">
-    <a class="brand" href="/">
-      <img src="/assets/images/pii_tranparent_background.png" alt="Peace Islands Institute Boston logo">
-      <span class="name">Peace Islands<br>Institute Boston</span>
-    </a>
-    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about-us/">About</a>
-      <a href="/events/">Events</a>
-      <a href="/interfaith/">Interfaith</a>
-      <a href="/friendship/">Friendship</a>
-      <a href="/get-involved/">Get Involved</a>
-      <a href="/contact-us/">Contact</a>
-      <a class="donate" href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener">Donate</a>
-    </nav>
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="contact-links">
+        <a href="mailto:info@piiboston.org"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@piiboston.org</a>
+        <a href="tel:+18148447940"><i class="fa-solid fa-phone" aria-hidden="true"></i> 814 844 7940</a>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://twitter.com/PeaceIslandsBS" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/peaceislandsma" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/peaceislandsboston/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCDVWBfDAmEnBCl45anbJ6qA" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/company/piiboston" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a class="utility-donate" href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener"><i class="fa-solid fa-heart" aria-hidden="true"></i> Donate</a>
+      </div>
+    </div>
   </div>
 </header>
 
+<div class="bar site-bar">
+    <a class="brand" href="/">
+      <img src="/assets/images/pii_rectangle_tranparentt_background.png" alt="Peace Islands Institute Boston logo">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Primary navigation">
+      <div class="nav-dropdown">
+        <button type="button" aria-expanded="false">Home <span aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/about-us/">Who We Are?</a>
+          <a href="/about-us/">What We Do?</a>
+          <a href="/about-us/">Mission &amp; Vision</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" aria-expanded="false">News &amp; Events <span aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/interfaith/">Inter/Intra Faith Gatherings</a>
+          <a href="/events/">Conference &amp; Panels</a>
+          <a href="/get-involved/">Community Services</a>
+          <a href="/events/">Charity Events</a>
+          <a href="/events/">Food &amp; Cultural Events</a>
+          <a href="/international-peace-trips/">International Peace Trips</a>
+          <a href="/friendship/">Public Heroes &amp; Friendship Dinners</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" aria-expanded="false">Get Involved <span aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/become-an-intern/">Become an Intern</a>
+          <a href="/become-a-volunteer/">Become a Volunteer</a>
+          <a href="/sponsor-application/">Become a Host</a>
+          <a href="/partnership-application/">Become a Partner</a>
+        </div>
+      </div>
+      <a href="/contact-us/">Contact Us</a>
+    </nav>
+</div>
+
 {{ content | safe }}
+
+<section class="sister-slider" data-sister-slider aria-label="Sister organizations and allies">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Together for peace</p>
+      <h2>Sister Organizations &amp; Allies</h2>
+    </div>
+    <div class="sister-carousel" data-sister-slider>
+      <div class="sister-viewport">
+        <div class="sister-track">
+          <a class="sister-logo" href="https://afsv.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-afsv.png" alt="Alliance for Shared Values"><strong>Alliance for Shared Values</strong></a>
+          <a class="sister-logo" href="https://www.embracerelief.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-embrace-relief.svg" alt="Embrace Relief"><strong>Embrace Relief</strong></a>
+          <a class="sister-logo" href="https://peaceislands.org/" target="_blank" rel="noopener"><img src="/assets/images/njlogo3_180x80.webp" alt="Peace Islands Institute New Jersey"><strong>New Jersey</strong></a>
+          <a class="sister-logo" href="https://peaceislandsny.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-peace-islands-ny.png" alt="Peace Islands Institute New York"><strong>New York</strong></a>
+          <a class="sister-logo" href="https://peaceislandspa.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-peace-islands-pa.webp" alt="Peace Islands Institute Pennsylvania"><strong>Pennsylvania</strong></a>
+          <a class="sister-logo" href="https://afsv.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-afsv.png" alt="Alliance for Shared Values"><strong>Alliance for Shared Values</strong></a>
+          <a class="sister-logo" href="https://www.embracerelief.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-embrace-relief.svg" alt="Embrace Relief"><strong>Embrace Relief</strong></a>
+          <a class="sister-logo" href="https://peaceislands.org/" target="_blank" rel="noopener"><img src="/assets/images/njlogo3_180x80.webp" alt="Peace Islands Institute New Jersey"><strong>New Jersey</strong></a>
+          <a class="sister-logo" href="https://peaceislandsny.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-peace-islands-ny.png" alt="Peace Islands Institute New York"><strong>New York</strong></a>
+          <a class="sister-logo" href="https://peaceislandspa.org/" target="_blank" rel="noopener"><img src="/assets/images/sister-peace-islands-pa.webp" alt="Peace Islands Institute Pennsylvania"><strong>Pennsylvania</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="site">
   <div class="wrap foot-grid">
     <div>
       <h5>Peace Islands Institute Boston</h5>
-      <p>PIIB is a DBA of Boston Dialogue Foundation Inc. Facilitating mutual respect, dialogue, and collaboration across the Greater Boston area.</p>
+      <p>In a diverse world, where even the farthest point is a click away, every culture, race, religion, tradition and nation become neighbors. We have to live and interact together in this “global island” we call Earth.</p>
+      <a class="footer-donate" href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener"><i class="fa-solid fa-heart" aria-hidden="true"></i> Donate</a>
     </div>
     <div>
-      <h5>Explore</h5>
+      <h5>About Us</h5>
       <ul>
-        <li><a href="/about-us/">About Us</a></li>
-        <li><a href="/events/">Events</a></li>
-        <li><a href="/get-involved/">Get Involved</a></li>
-        <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-spread-peace" target="_blank" rel="noopener">Donate</a></li>
+        <li><a href="/about-us/">Who We Are?</a></li>
+        <li><a href="/about-us/">What We Do?</a></li>
+        <li><a href="/about-us/">Mission &amp; Vision</a></li>
       </ul>
     </div>
     <div>
-      <h5>Connect</h5>
+      <h5>News &amp; Events</h5>
       <ul>
-        <li><a href="mailto:info@piiboston.org">info@piiboston.org</a></li>
-        <li><a href="https://www.facebook.com/peaceislandsma" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="https://www.instagram.com/peaceislandsboston/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="/interfaith/">Inter/Intra Faith Gatherings</a></li>
+        <li><a href="/events/">Conference &amp; Panels</a></li>
+        <li><a href="/get-involved/">Community Services</a></li>
+        <li><a href="/events/">Charity Events</a></li>
+        <li><a href="/events/">Food &amp; Cultural Events</a></li>
+        <li><a href="/international-peace-trips/">International Peace Trips</a></li>
+        <li><a href="/friendship/">Friendship Dinners</a></li>
       </ul>
+    </div>
+    <div>
+      <h5>Get Involved</h5>
+      <ul>
+        <li><a href="/become-an-intern/">Become an Intern</a></li>
+        <li><a href="/become-a-volunteer/">Become a Volunteer</a></li>
+        <li><a href="/sponsor-application/">Become a Host</a></li>
+        <li><a href="/partnership-application/">Become a Partner</a></li>
+        <li><a href="/newsletter/">Subscribe to Our Newsletter</a></li>
+      </ul>
+      <p class="footer-newsletter-copy">Click the button below and fill the form to be informed about events and current news.</p>
+    </div>
+    <div class="footer-contact">
+      <h5>Contact</h5>
+      <ul>
+        <li><strong>Call Anytime</strong><a href="tel:+18148447940">814 844 7940</a></li>
+        <li><strong>Send Email</strong><a href="mailto:info@piima.org">info@piima.org</a></li>
+        <li><strong>Visit Office</strong><span>165 Main St<br>Cambridge MA 02142</span></li>
+      </ul>
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="https://twitter.com/PeaceIslandsBS" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.facebook.com/peaceislandsma" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/peaceislandsboston/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCDVWBfDAmEnBCl45anbJ6qA" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/company/piiboston" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
     </div>
   </div>
-  <div class="wrap bottom">© {{ currentYear }} Peace Islands Institute Boston. 500 Revere St, Revere, MA 02151.</div>
+  <div class="wrap bottom">© {{ currentYear }} Designed by PII Boston. PIIB is a DBA of Boston Dialogue Foundation Inc. Tax ID # 04-3506875</div>
 </footer>
 
 <script src="/assets/js/main.js"></script>

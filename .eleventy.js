@@ -38,6 +38,13 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.data.date.localeCompare(b.data.date));
   });
 
+  eleventyConfig.addCollection("recentEvents", (api) => {
+    const eventPages = api.getFilteredByTag("event");
+    const eventPosts = api.getFilteredByTag("post").filter((post) =>
+      post.data.categories && post.data.categories.includes("Events"));
+    return eventPages.concat(eventPosts).sort(byDateDesc);
+  });
+
   return {
     dir: { input: "src", output: "_site", includes: "_includes" },
   };
