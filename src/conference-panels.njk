@@ -10,7 +10,7 @@ permalink: /conference-panels/index.html
 <div class="wrap">
   <section>
     <div class="events-grid">
-      {% for e in collections.upcomingEvents %}
+      {% for e in collections.eventsTimeline %}
       {% if "Conference & Panels" in e.data.categories %}
       <a class="event-card" href="{{ e.url }}">
         <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>

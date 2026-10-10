@@ -14,10 +14,9 @@ permalink: /events/index.html
       <p class="eyebrow">What's next</p>
       <h2>Upcoming Events</h2>
     </div>
-    {% if collections.upcomingEvents.length %}
-    <div class="events-grid">
+    <div class="events-grid" data-upcoming-events>
       {% for e in collections.upcomingEvents %}
-      <a class="event-card" href="{{ e.url }}">
+      <a class="event-card" href="{{ e.url }}" data-event-date="{{ e.data.date }}">
         <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
         <div class="body">
           <p class="date">{{ e.data.date | readableDate }}</p>
@@ -26,12 +25,10 @@ permalink: /events/index.html
       </a>
       {% endfor %}
     </div>
-    {% else %}
-    <div class="empty-state">
+    <div class="empty-state" data-upcoming-empty{% if collections.upcomingEvents.length %} hidden{% endif %}>
       <h3>No events currently scheduled</h3>
       <p>Check back soon, or follow us on Facebook for the latest updates.</p>
     </div>
-    {% endif %}
   </section>
 
   <section>
@@ -39,7 +36,16 @@ permalink: /events/index.html
       <p class="eyebrow">Our history</p>
       <h2>Past Events</h2>
     </div>
-    <div class="events-grid">
+    <div class="events-grid" data-past-events>
+      {% for e in collections.pastEvents %}
+      <a class="event-card" href="{{ e.url }}">
+        <div class="photo">{% if e.data.image %}<img src="{{ e.data.image }}" alt="{{ e.data.title }}">{% else %}<span class="none">Photo not available</span>{% endif %}</div>
+        <div class="body">
+          {% if e.data.date %}<p class="date">{{ e.data.date | readableDate }}</p>{% endif %}
+          <h3>{{ e.data.title }}</h3>
+        </div>
+      </a>
+      {% endfor %}
       {% for p in collections.posts %}
       {% if "Events" in p.data.categories %}
       <a class="event-card" href="{{ p.url }}">

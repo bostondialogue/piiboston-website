@@ -44,6 +44,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Events whose date has passed since the last build move from
+  // "Upcoming" to the top of "Past Events" (dates compared in Boston time).
+  const upcomingGrid = document.querySelector("[data-upcoming-events]");
+  if (upcomingGrid) {
+    const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+    const pastGrid = document.querySelector("[data-past-events]");
+    const expired = [...upcomingGrid.querySelectorAll("[data-event-date]")]
+      .filter((card) => card.dataset.eventDate < today);
+    // upcoming cards are soonest-first, so prepending in order leaves the newest on top
+    expired.forEach((card) => (pastGrid ? pastGrid.prepend(card) : card.remove()));
+    const empty = document.querySelector("[data-upcoming-empty]");
+    if (empty) empty.hidden = upcomingGrid.children.length > 0;
+  }
+
   const slider = document.querySelector("[data-slider]");
   if (!slider) return;
 

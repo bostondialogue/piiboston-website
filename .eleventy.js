@@ -12,10 +12,13 @@ module.exports = function (eleventyConfig) {
     return `${MONTHS[m - 1]} ${d}, ${y}`;
   });
 
+  // "today" in Boston as YYYY-MM-DD; an event stays upcoming through its own date
+  const todayInBoston = () =>
+    new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+
   eleventyConfig.addFilter("isUpcoming", (iso) => {
     if (!iso) return false;
-    const today = new Date().toISOString().slice(0, 10);
-    return iso >= today;
+    return iso >= todayInBoston();
   });
 
   // posts without a recovered date sort after every dated post
@@ -31,12 +34,27 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("events", (api) =>
     api.getFilteredByTag("event").sort(byDateDesc));
 
-  eleventyConfig.addCollection("upcomingEvents", (api) => {
-    const today = new Date().toISOString().slice(0, 10);
+  // Upcoming/past is decided at build time here, then re-checked in the
+  // browser by main.js so events move to "past" without needing a rebuild.
+  const upcomingEvents = (api) => {
+    const today = todayInBoston();
     return api.getFilteredByTag("event")
       .filter((e) => e.data.date && e.data.date >= today)
       .sort((a, b) => a.data.date.localeCompare(b.data.date));
-  });
+  };
+  const pastEvents = (api) => {
+    const today = todayInBoston();
+    return api.getFilteredByTag("event")
+      .filter((e) => !e.data.date || e.data.date < today)
+      .sort(byDateDesc);
+  };
+
+  eleventyConfig.addCollection("upcomingEvents", upcomingEvents);
+  eleventyConfig.addCollection("pastEvents", pastEvents);
+
+  // soonest upcoming first, then past events newest first
+  eleventyConfig.addCollection("eventsTimeline", (api) =>
+    upcomingEvents(api).concat(pastEvents(api)));
 
   eleventyConfig.addCollection("recentEvents", (api) => {
     const eventPages = api.getFilteredByTag("event");
