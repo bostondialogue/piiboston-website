@@ -80,6 +80,8 @@ nav a:hover, .nav-dropdown > button:hover, nav a.current { color: var(--blue-dar
 .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 13px 26px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 15px; }
 .btn-gold { background: var(--gold); color: #2a1f00; }
+.btn-blue { background: var(--blue); color: #fff; }
+.btn-blue:hover { background: var(--blue-dark); }
 .btn-outline { border: 2px solid var(--blue); color: var(--blue-dark); }
 
 .who-we-are { background: var(--surface); padding-top: 78px; padding-bottom: 86px; }
@@ -200,6 +202,10 @@ section:last-child { border-bottom: none; }
 .link-list span { display: block; color: var(--muted); font-size: 14.5px; margin-top: 2px; }
 
 .post-hero-img, .event-flyer { border-radius: 14px; margin-bottom: 24px; max-height: 480px; width: 100%; object-fit: cover; }
+.event-flyer { max-height: none; object-fit: contain; }
+.event-meta { list-style: none; padding: 18px 22px; margin: 0 0 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.event-meta li { display: flex; gap: 14px; padding: 6px 0; }
+.event-meta strong { flex: 0 0 82px; color: var(--blue-dark); font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
 .tag-row { margin-top: 24px; }
 .tag { display: inline-block; background: #eef5fb; color: var(--blue-dark); padding: 5px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 700; margin-right: 8px; }
 

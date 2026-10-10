@@ -15,8 +15,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
       - { label: "End time (optional)", name: "end_date", widget: "string", required: false }
+      - { label: "Time (shown on page)", name: "time", widget: "string", required: false }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Audience", name: "audience", widget: "string", required: false }
+      - { label: "Registration link", name: "registration_url", widget: "string", required: false }
       - { label: "Flyer image", name: "image", widget: "image", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["Interfaith", "Friendship", "Food & Culture", "Conference & Panels", "Charity Events", "Community Services"]
       - { label: "Tags", name: "tags", widget: "hidden", default: ["event"] }
+      - { label: "Details", name: "body", widget: "markdown", required: false }
 
   - name: "posts"
     label: "News & Past Events"

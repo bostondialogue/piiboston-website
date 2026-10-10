@@ -8,6 +8,21 @@ layout: base.njk
 <div class="wrap">
   <section class="prose narrow event-detail">
     {% if image %}<img class="event-flyer" src="{{ image }}" alt="{{ title }} flyer">{% endif %}
+    {% if time or location or audience %}
+    <ul class="event-meta">
+      <li><strong>Date</strong><span>{{ date | readableDate }}</span></li>
+      {% if time %}<li><strong>Time</strong><span>{{ time }}</span></li>{% endif %}
+      {% if location %}<li><strong>Location</strong><span>{{ location }}</span></li>{% endif %}
+      {% if audience %}<li><strong>Who</strong><span>{{ audience }}</span></li>{% endif %}
+    </ul>
+    {% endif %}
+    {% if registration_url %}<p><a class="btn btn-blue" href="{{ registration_url }}" target="_blank" rel="noopener">Register Now &rarr;</a></p>{% endif %}
+    {{ content | safe }}
+    {% if categories %}
+    <p class="tag-row">
+      {% for c in categories %}<span class="tag">{{ c }}</span>{% endfor %}
+    </p>
+    {% endif %}
     <p><a class="btn btn-gold" href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23499" target="_blank" rel="noopener">Support this event — Donate</a></p>
     <p><a href="/events/">&larr; Back to all events</a></p>
   </section>
