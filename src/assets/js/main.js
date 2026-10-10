@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Events whose date has passed since the last build move from
   // "Upcoming" to the top of "Past Events" (dates compared in Boston time).
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
   const upcomingGrid = document.querySelector("[data-upcoming-events]");
   if (upcomingGrid) {
-    const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
     const pastGrid = document.querySelector("[data-past-events]");
     const expired = [...upcomingGrid.querySelectorAll("[data-event-date]")]
       .filter((card) => card.dataset.eventDate < today);
@@ -56,6 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
     expired.forEach((card) => (pastGrid ? pastGrid.prepend(card) : card.remove()));
     const empty = document.querySelector("[data-upcoming-empty]");
     if (empty) empty.hidden = upcomingGrid.children.length > 0;
+  }
+
+  // Homepage carousel: upcoming events lead (soonest first), so any that
+  // have since passed drop behind the remaining upcoming ones, newest first.
+  const eventsTrack = document.querySelector("[data-events-track]");
+  if (eventsTrack) {
+    const dated = [...eventsTrack.querySelectorAll("[data-event-date]")];
+    const stillUpcoming = dated.filter((card) => card.dataset.eventDate >= today);
+    const anchor = stillUpcoming.length ? stillUpcoming[stillUpcoming.length - 1] : null;
+    dated.filter((card) => card.dataset.eventDate < today).forEach((card) => {
+      if (anchor) anchor.after(card);
+      else eventsTrack.prepend(card);
+    });
   }
 
   const slider = document.querySelector("[data-slider]");

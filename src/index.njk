@@ -69,10 +69,10 @@ permalink: /index.html
     <div class="event-carousel">
       <button class="event-carousel-control event-carousel-prev" type="button" data-events-prev aria-label="Previous events">&#8249;</button>
       <div class="event-carousel-viewport" data-events-viewport tabindex="0" aria-label="Upcoming events carousel">
-        <div class="event-carousel-track">
+        <div class="event-carousel-track" data-events-track>
           {% for e in collections.recentEvents %}
           {% if loop.index <= 10 %}
-          <a class="event-card" href="{{ e.url }}">
+          <a class="event-card" href="{{ e.url }}"{% if e.data.date | isUpcoming %} data-event-date="{{ e.data.date }}"{% endif %}>
             <div class="photo"><img src="{% if e.data.image %}{{ e.data.image }}{% else %}{{ fallbackImages[(loop.index0) % (fallbackImages.length)] }}{% endif %}" alt="{{ e.data.title }}"></div>
             <div class="body">
               <p class="date">{{ e.data.date | readableDate }}</p>

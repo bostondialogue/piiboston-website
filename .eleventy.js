@@ -60,7 +60,14 @@ module.exports = function (eleventyConfig) {
     const eventPages = api.getFilteredByTag("event");
     const eventPosts = api.getFilteredByTag("post").filter((post) =>
       post.data.categories && post.data.categories.includes("Events"));
-    return eventPages.concat(eventPosts).sort(byDateDesc);
+    const today = todayInBoston();
+    const all = eventPages.concat(eventPosts);
+    // soonest upcoming first, then past events and write-ups newest first
+    const upcoming = all.filter((e) => e.data.date && e.data.date >= today)
+      .sort((a, b) => a.data.date.localeCompare(b.data.date));
+    const past = all.filter((e) => !e.data.date || e.data.date < today)
+      .sort(byDateDesc);
+    return upcoming.concat(past);
   });
 
   return {
